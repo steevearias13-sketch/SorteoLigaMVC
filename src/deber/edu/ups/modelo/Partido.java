@@ -68,7 +68,11 @@ public class Partido implements Serializable{
 
     @Override
     public String toString() {
-        return "[" + etapa + "] " + equipo1.getNombre() + " VS " + equipo2.getNombre();
+        String resultado = "[" + etapa + "] " + equipo1.getNombre() + " VS " + equipo2.getNombre();
+        if (ganador != null) {
+            resultado += " --> Ganador: " + ganador.getNombre();
+        }
+        return resultado;
     }
     
 }
